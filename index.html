@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 23</title>
+    <style>
+        body{
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            border: 1px solid #ff4d4d;
+            width: 500px;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin-top: 50px;
+            background-color: #fff;
+        }
+        .heading{
+            text-align: center;
+            color: #ff4d4d;
+        }
+        .dice{
+            height: 200px;
+            display: block;
+            margin: 50px auto;
+        }
+        .btn-roll{
+            display: block;
+            margin: 0 auto;
+            font-size: 40px;
+            padding:  5px 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media  and (max-width: 500px) {
+            .container{
+                width: 90%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Dice Roller</h1>
+        <img src="img/dice.png"  class="dice"  id="dice-img"/>
+        <button class="btn-roll" onclick="rollDice()">Roll Dice</button>
+    </div>
+    <script>
+        function rollDice() {
+            const min=1;
+            const max=6;
+
+        const random = Math.floor(Math.random () *(max - min + 1)) + min;
+
+        const diceImg = document.getElementById('dice-img');
+
+        if (random == 1){
+            diceImg.src ="./img/dice1.png";
+        }else if (random==2){
+            diceImg.src ="img/dice2.png";
+        }else if (random==3){
+            diceImg.src ="img/dice 3.png";
+        }else if (random==4){
+            diceImg.src ="img/dice 4.png";
+        }else if (random==5){
+            diceImg.src ="img/dice 5.png";
+        }else if (random==6){
+            diceImg.src ="img/disc 6.png";
+        }
+     }
+     </script>
+    
+</body>
+</html>
